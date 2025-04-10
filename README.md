@@ -1,1 +1,3 @@
 GenFlow is an AI-powered workflow automation system designed to streamline business processes by integrating voice, text, and AI models. It enables intelligent automation through voice commands, dynamic summarization, and content generation. GenFlow can process documents, generate automated reports, convert text to speech, and provide real-time feedback through AI agents. Built with OpenAI's models, GenFlow is ideal for applications in sectors like healthcare, education, legal, and business operations. It leverages MLOps for continuous improvement, ensuring that workflows remain optimized and adaptive over time.
+
+NB: Copyright protected
