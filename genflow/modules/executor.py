@@ -3,7 +3,7 @@ from openai import OpenAI
 import os
 
 #Load environment variables from .env file
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+#Code omitted: load your OpenAI key
 
 def call_openai_model(prompt, model="gpt-3.5-turbo", temperature=0.7):
     response = client.chat.completions.create(
