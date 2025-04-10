@@ -1,0 +1,61 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>f8abcfce-f3a8-456a-9944-1652c9a51cb1</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>genflow\main.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>GenFlow- a GenAI workflow automator</Name>
+    <RootNamespace>GenFlow- a GenAI workflow automator</RootNamespace>
+    <SuppressEnvironmentCreationPrompt>True</SuppressEnvironmentCreationPrompt>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="genflow\modules\agents\evaluator_agent.py" />
+    <Compile Include="genflow\modules\agents\input_agent.py" />
+    <Compile Include="genflow\modules\agents\orchestrator.py" />
+    <Compile Include="genflow\modules\agents\summarizer_agent.py" />
+    <Compile Include="genflow\modules\agents\output_agent.py" />
+    <Compile Include="genflow\modules\agents\utils\audio.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="genflow\modules\executor.py" />
+    <Compile Include="genflow\main.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="genflow\" />
+    <Folder Include="genflow\modules\" />
+    <Folder Include="genflow\modules\agents\" />
+    <Folder Include="genflow\input\" />
+    <Folder Include="genflow\modules\agents\utils\" />
+    <Folder Include="genflow\outputs\" />
+    <Folder Include="genflow\tasks\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="genflow\input\sample_report.txt" />
+    <Content Include="genflow\outputs\evaluation.md" />
+    <Content Include="genflow\outputs\output.md" />
+    <Content Include="genflow\tasks\example_task.yaml" />
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>

@@ -1,0 +1,30 @@
+#Descriptive parameter, changes won't affect output
+task_name: "ChatBot Report"
+
+# Choose if you want to talk to explain the description or not
+voice_input_description: true
+
+#Decide wheter or not to use the voice output
+# If you set it to true, the output will be read by the voice synthesizer
+voice_output_summary: true
+
+# The effective instruction to the main agent and to the evaluator
+description: "Translate the text in Italian language"
+
+# Location to find the input file with your request
+input_file: "genflow\\input\\sample_report.txt"
+
+# Choosen model 
+model: "gpt-3.5-turbo"
+
+# It specifies the output format: it can be 'markdown', 'json', 'csv', 'text', or 'plain_text'
+output_format: "plain_text"
+
+# Activates few shot prompting 
+few_shot: false
+
+# Metrics to evaluate the output
+evaluation:
+  - completeness
+  - consistency
+  - relevance
